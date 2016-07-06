@@ -80,7 +80,8 @@ HEADERS = {
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'doubanmovie.pipelines.DoubanmoviePipeline': 1,
+  'doubanmovie.pipelines.DoubanmoviePipeline': 2,
+  'doubanmovie.pipelines.MongoDBPipeline': 1,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

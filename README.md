@@ -33,6 +33,7 @@ class DoubanmovieItem(Item):
 name = "douban"
 ```
 * pipelines.py 用于处理爬虫返回的item数据
+  * 分别存储在文本和数据库里
 
 ```python
 class DoubanmoviePipeline(object):
@@ -51,11 +52,43 @@ class DoubanmoviePipeline(object):
         return item
 
 ```
+
+```python
+class MongoDBPipeline(object):
+    def __init__(self):
+        # 保存数据到mongodb的douban.db_movies里
+        connection = pymongo.MongoClient("localhost", 27017)
+        self.db = connection["douban"]
+        self.db_movies = self.db["db_movies"]
+
+
+    def process_item(self, item, spider):
+        if isinstance(item, DoubanmovieItem):
+            self.saveOrUpdate(self.db_movies,item)
+        return item
+
+    def saveOrUpdate(self,collection,item):
+        movie_name = dict(item).get("movie_name")
+        movie_date = dict(item).get("movie_date")
+
+        if movie_name is not None:
+            tmp = collection.find_one({"movie_name":movie_name,"movie_date":movie_date})
+            #数据库不存在
+            if tmp is None:
+                print movie_name
+                collection.insert(dict(item))
+                #TODO 暂时只插入不更新
+            # else:
+            #     collection.update({"movie_name":movie_name},dict(item))
+        else:
+            collection.insert(dict(item))
+```
 * settings.py 设置scrapy的一些功能
-  * 设置pipelines
+  * 设置pipelines,分别调用pipelines里的类处理数据，后面数字越小，优先级越高
 ```
 ITEM_PIPELINES = {
-   'doubanmovie.pipelines.DoubanmoviePipeline': 1,
+   'doubanmovie.pipelines.DoubanmoviePipeline': 2,
+   'doubanmovie.pipelines.MongoDBPipeline': 1,
 }
 ```
   * 设置USER_AGENT，防止被ban(可在爬虫里手动设置headers,更改Request请求头)
@@ -74,9 +107,14 @@ movie_name1
 movie_name2
 movie_name3
 ```
+#### mongodb设置
+```
+> use douban                          #新建库
+> db.createCollection('db_movies')    #新建存储电影数据的集合
+```
 
 #### scrapy进行爬取
 ```
 scrapy crawl douban
 ```
-#### 爬取结果储存在result.txt文件里
+#### 爬取结果储存在result.txt文件里和mongdb里douban.db_movies
