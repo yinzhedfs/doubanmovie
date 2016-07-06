@@ -23,6 +23,8 @@ class DoubanmovieItem(Item):
     movie_date = Field()
     movie_long = Field()
     movie_description = Field()
+    movie_type = Field()
+    movie_country = Field()
 
 ```
 * spiders/douban_spider.py 是爬虫的主体，用于抓取数据，返回item
@@ -62,7 +64,7 @@ USER_AGENT = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0) Gecko/20100101 Fi
 ```
   * 设置DOWNLOAD_DELAY,减少对服务器的压力，但速度会变慢
 ```
-DOWNLOAD_DELAY = 1
+DOWNLOAD_DELAY = 0.5
 ```
 
 * 更改movie_lists.txt文件，将所要爬取的电影名添加进去

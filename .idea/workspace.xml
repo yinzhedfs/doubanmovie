@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc2d2190-6a3d-4134-9a4e-551f89009346" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/doubanmovie.iml" afterPath="$PROJECT_DIR$/.idea/doubanmovie.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doubanmovie/items.py" afterPath="$PROJECT_DIR$/doubanmovie/items.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doubanmovie/settings.py" afterPath="$PROJECT_DIR$/doubanmovie/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doubanmovie/spiders/douban_spider.py" afterPath="$PROJECT_DIR$/doubanmovie/spiders/douban_spider.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/movie_lists.txt" afterPath="$PROJECT_DIR$/movie_lists.txt" />
     </list>
     <ignored path="doubanmovie.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/doubanmovie/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-326">
-              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="298">
+              <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -62,8 +57,8 @@
       <file leaf-file-name="items.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/doubanmovie/items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+            <state relative-caret-position="288">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
               <folding>
                 <element signature="e#152#165#0" expanded="true" />
               </folding>
@@ -71,7 +66,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/doubanmovie/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="384">
@@ -100,10 +95,10 @@
       <list>
         <option value="$USER_HOME$/.local/lib/python2.7/site-packages/scrapy/spiders/__init__.py" />
         <option value="$PROJECT_DIR$/doubanmovie/spiders/self_test.py" />
-        <option value="$PROJECT_DIR$/doubanmovie/settings.py" />
         <option value="$PROJECT_DIR$/doubanmovie/items.py" />
         <option value="$PROJECT_DIR$/doubanmovie/pipelines.py" />
         <option value="$PROJECT_DIR$/doubanmovie/spiders/douban_spider.py" />
+        <option value="$PROJECT_DIR$/doubanmovie/settings.py" />
       </list>
     </option>
   </component>
@@ -787,14 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doubanmovie/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-326">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Envs/scrapy/local/lib/python2.7/site-packages/scrapy/http/request/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-830">
@@ -821,8 +808,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/doubanmovie/items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        <state relative-caret-position="288">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
           <folding>
             <element signature="e#152#165#0" expanded="true" />
           </folding>
@@ -836,6 +823,14 @@
           <folding>
             <element signature="e#193#204#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doubanmovie/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
