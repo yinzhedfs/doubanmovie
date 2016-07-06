@@ -18,7 +18,7 @@ NEWSPIDER_MODULE = 'doubanmovie.spiders'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'doubanmovie (+http://www.yourdomain.com)'
 
-USER_AGENT = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0) Gecko/20100101 Firefox/46.0'
+#USER_AGENT = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0) Gecko/20100101 Firefox/46.0'
 
 # EXTENSIONS = {'scrapy.contrib.feedexport.FeedExporter': None}
 # Obey robots.txt rules
@@ -46,6 +46,17 @@ COOKIES_ENABLED = True
 #   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
 #   'Accept-Language': 'en',
 #}
+HEADERS = {
+  'Host':'movie.douban.com',
+  'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:46.0) Gecko/20100101 Firefox/46.0',
+  'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'Accept-Encoding':'gzip, deflate, br',
+  'Accept-Language':'zh,zh-HK;q=0.8,zh-CN;q=0.7,en-US;q=0.5,en;q=0.3,el;q=0.2',
+  'Connection':'keep-alive',
+  'Cache-Control':'max-age=0',
+  'DNT':'1',
+  'Referer':None #注意如果依然不能抓取的话，这里可以设置抓取网站的host
+}
 
 
 # Enable or disable spider middlewares

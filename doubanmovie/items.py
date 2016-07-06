@@ -18,3 +18,5 @@ class DoubanmovieItem(Item):
     movie_date = Field()
     movie_long = Field()
     movie_description = Field()
+    movie_type = Field()
+    movie_country = Field()
